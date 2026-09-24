@@ -1,0 +1,16 @@
+Métrica / Parámetro,Diseño Inicial (5.0 mm),Diseño Optimizado,Variación (%),Límite Admisible
+Espesor h (mm),5.00,5.83,+16.60%,3.0 - 8.0 mm
+Longitud L (mm),100.0,100.0,0.00%,100 mm
+Ancho b (mm),20.0,20.0,0.00%,20 mm
+Carga Total P (N),100.0,100.0,0.00%,100 N
+Desplazamiento Máximo Umax (mm),0.7888,0.4986,-36.79%,<= 0.500 mm
+Desplazamiento Promedio Cara Carga Uavg (mm),0.7885,0.4983,-36.80%,-
+Tensión Von Mises Máxima (MPa),114.91,88.19,-23.25%,<= 100.0 MPa
+Masa de la Placa (g),78.50,91.53,+16.60%,Mínimo
+Número de Nodos,6985,7641,+9.39%,-
+Número de Elementos,3707,4051,+9.28%,-
+Tiempo de Ejecución (s),1.64,1.87,-,-
+Reacción en Soporte RFz (N),100.00,100.00,0.00%,100.0 N
+Cumple Restricción Umax <= 0.5 mm,NO (0.789 mm > 0.5 mm),SÍ (0.499 mm <= 0.5 mm),-,SÍ
+Cumple Restricción Von Mises <= 100 MPa,NO (114.91 MPa > 100 MPa),SÍ (88.19 MPa <= 100 MPa),-,SÍ
+Estado de Simulación,SUCCESS,SUCCESS,-,SUCCESS

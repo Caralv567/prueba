@@ -1,0 +1,14 @@
+sim_runs/
+*.step
+*.inp
+*.frd
+*.dat
+*.cvg
+*.sta
+*.12d
+spooles.out
+__pycache__/
+*.pyc
+cantilever_run*
+cantilever_test*
+gmsh_export*
