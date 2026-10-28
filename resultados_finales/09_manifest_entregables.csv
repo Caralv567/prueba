@@ -1,0 +1,10 @@
+archivo,descripcion,ruta,existe,tamanio_bytes,estado_validacion
+01_resultados_barrido.csv,Tabla CSV con todos los casos del barrido paramétrico,resultados_finales/01_resultados_barrido.csv,True,1228,COMPLETO
+02_comparacion_disenos.csv,Tabla CSV comparativa del diseño inicial y el candidato confirmado,resultados_finales/02_comparacion_disenos.csv,True,930,COMPLETO
+03_verificaciones.csv,"Tabla CSV de comprobaciones mecánicas, numéricas y computacionales",resultados_finales/03_verificaciones.csv,True,1813,COMPLETO
+04_desplazamiento_vs_espesor.png,Gráfica de espesor frente a desplazamiento máximo y límite de 0.5 mm,resultados_finales/04_desplazamiento_vs_espesor.png,True,160658,COMPLETO
+05_von_mises_vs_espesor.png,Gráfica de espesor frente a tensión Von Mises y límite de 100 MPa,resultados_finales/05_von_mises_vs_espesor.png,True,152223,COMPLETO
+06_masa_vs_espesor.png,Gráfica de espesor frente a masa estimada de la placa,resultados_finales/06_masa_vs_espesor.png,True,117741,COMPLETO
+07_resumen_tecnico.md,Informe técnico completo en formato Markdown en español,resultados_finales/07_resumen_tecnico.md,True,8354,COMPLETO
+08_registro_ejecucion.log,"Registro detallado de ejecuciones, eventos y correcciones",resultados_finales/08_registro_ejecucion.log,True,3785,COMPLETO
+09_manifest_entregables.csv,Inventario y auditoría final de entregables obligatorios,resultados_finales/09_manifest_entregables.csv,True,1447,COMPLETO

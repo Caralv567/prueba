@@ -1,0 +1,11 @@
+Comprobación,Categoría,Resultado / Evidencia,Criterio / Tolerancia,Estado
+Terminación correcta de CalculiX (ccx),Computacional,Código de retorno = 0 para todas las 6 simulaciones del barrido y confirmación.,returncode == 0,PASSED
+Existencia y legibilidad de archivos .frd y .inp,Computacional,Archivos .inp y .frd generados correctamente y parseados sin excepciones.,Archivo existe y tamaño > 0 B,PASSED
+Presencia de nodos y elementos utilizables,Numérica,Mallas 3D válidas con ~6985 nodos y ~3707 elementos C3D10.,"Nodos > 0, Elementos > 0",PASSED
+Resultante de carga vertical aplicada (-100 N en Z),Mecánica,Carga distribuida nodales en cara libre X=+50 mm suma exactamente -100.00 N.,Suma Fz = -100.0 N,PASSED
+Restricción de desplazamientos en empotramiento (X=-50 mm),Mecánica,Desplazamiento máximo en nodos empotrados = 0.00e+00 mm.,|U_fixed| < 1.0e-6 mm,PASSED
+Equilibrio estático de fuerzas y reacciones (RFz = +100 N),Mecánica,Suma de reacciones nodales RFz en soporte empotrado = +100.00 N (error < 0.01%).,Diferencia con P < 2.0%,PASSED
+Ausencia de valores NaN o infinitos,Numérica,"Todos los desplazamientos, tensiones y masa son números reales válidos.",not np.isnan y isfinite,PASSED
+Comparación con teoría de vigas de Euler-Bernoulli (h=5 mm),Teórica,MEF Umax = 0.7888 mm vs Teoría = 0.8000 mm (error rel. 1.40%); Von Mises MEF = 114.91 MPa vs Teoría = 120.00 MPa (error rel. 4.24%).,Error relativo < 10.0%,PASSED
+Cumplimiento de restricciones de diseño en óptimo,Diseño,Diseño h=5.83 mm: Umax = 0.4986 mm (<=0.5 mm) y Von Mises = 88.19 MPa (<=100 MPa).,Umax <= 0.5 mm & Von Mises <= 100 MPa,PASSED
+Coherencia de unidades y parámetros físicos,Física,Sistema de unidades mm-N-MPa-t-s estricto y coherente en todo el flujo.,"1 MPa = 1 N/mm^2, rho = 7.85e-9 t/mm^3",PASSED
