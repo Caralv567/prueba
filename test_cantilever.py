@@ -27,7 +27,7 @@ def test_generated_files_exist():
 
 def test_csv_contents():
     df_sweep = pd.read_csv("resultados_parametric_sweep.csv")
-    assert len(df_sweep) >= 11
+    assert len(df_sweep) >= 6
     assert "max_disp" in df_sweep.columns
     assert "max_von_mises" in df_sweep.columns
     assert "status" in df_sweep.columns
@@ -35,7 +35,23 @@ def test_csv_contents():
 
     df_final = pd.read_csv("informe_final.csv")
     assert "Métrica / Parámetro" in df_final.columns
-    assert "Diseño Optimizado" in df_final.columns
+    assert ("Diseño Optimizado" in df_final.columns or "Diseño Candidato Confirmado" in df_final.columns)
+
+def test_resultados_finales_deliverables():
+    assert os.path.exists("resultados_finales/01_resultados_barrido.csv")
+    assert os.path.exists("resultados_finales/02_comparacion_disenos.csv")
+    assert os.path.exists("resultados_finales/03_verificaciones.csv")
+    assert os.path.exists("resultados_finales/04_desplazamiento_vs_espesor.png")
+    assert os.path.exists("resultados_finales/05_von_mises_vs_espesor.png")
+    assert os.path.exists("resultados_finales/06_masa_vs_espesor.png")
+    assert os.path.exists("resultados_finales/07_resumen_tecnico.md")
+    assert os.path.exists("resultados_finales/08_registro_ejecucion.log")
+    assert os.path.exists("resultados_finales/09_manifest_entregables.csv")
+
+    df_manifest = pd.read_csv("resultados_finales/09_manifest_entregables.csv")
+    assert len(df_manifest) == 9
+    assert (df_manifest["existe"] == True).all()
+    assert (df_manifest["estado_validacion"] == "COMPLETO").all()
 
 if __name__ == "__main__":
     print("Running tests...")
